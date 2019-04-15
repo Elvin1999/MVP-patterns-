@@ -8,19 +8,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.View;
-
+using WindowsFormsApp1.Model;
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form,IView
     {
-        public Form1()
+        public Model.Model Model { get; set; }
+        public Form1(Model.Model model)
         {
             InitializeComponent();
+            Model = model;
         }
+       
 
         public void Show()
         {
-            MessageBox.Show("Test");
+            ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Label labelTeacher = new Label();
+            labelTeacher.Size = new Size(300, 100);
+            labelTeacher.Location = new Point(100, 100);
+            labelTeacher.Text = Model.Teacher.Name+" "+Model.Teacher.Surname;
+            labelTeacher.Font = new Font("Comic Sans MS", 16, FontStyle.Italic);
+
+            this.Controls.Add(labelTeacher);
+            
         }
     }
 }

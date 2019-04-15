@@ -11,7 +11,7 @@ namespace WindowsFormsApp1.Presenter
     {
         IView view;
         public MainController(IView view)
-        {
+        { 
             this.view = view;
         }
 

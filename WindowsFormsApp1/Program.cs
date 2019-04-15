@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.Presenter;
-
 namespace WindowsFormsApp1
 {
     static class Program
@@ -17,8 +16,29 @@ namespace WindowsFormsApp1
         { 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
-            new MainController(new Form1()).ShowDialog();
+            Application.Run();
+           Model.Model model = new Model.Model() {
+                Teacher=new Entities.Teacher()
+                {
+                    Name="Elvin",
+                    Surname="Camalzade"
+                },
+                Student=new List<Entities.Student>() {
+                    new Entities.Student(){
+                        Name="Samir",Surname="Osmanov"
+                    },
+                    new Entities.Student(){
+                        Name="Anar",Surname="Ehmedov"
+                    }
+
+                    
+                }
+
+
+            };
+
+            new MainController(new Form1(model)).ShowDialog();
+
         }
     }
 }

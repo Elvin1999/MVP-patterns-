@@ -33,8 +33,13 @@ namespace WindowsFormsApp1
             labelTeacher.Location = new Point(100, 100);
             labelTeacher.Text = Model.Teacher.Name+" "+Model.Teacher.Surname;
             labelTeacher.Font = new Font("Comic Sans MS", 16, FontStyle.Italic);
-
+            DataGridView groupsdg = new DataGridView();
+            groupsdg.Size = new Size(300, 150);
+            groupsdg.Font = new Font("Comic Sans MS", 8, FontStyle.Italic);
+            groupsdg.Location = new Point(100, 200);
+            groupsdg.DataSource = Model.Student;
             this.Controls.Add(labelTeacher);
+            this.Controls.Add(groupsdg);
             
         }
     }

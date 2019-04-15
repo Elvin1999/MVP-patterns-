@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         { 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run();
+           // Application.Run();
            Model.Model model = new Model.Model() {
                 Teacher=new Entities.Teacher()
                 {
@@ -33,7 +33,6 @@ namespace WindowsFormsApp1
 
                     
                 }
-
 
             };
 

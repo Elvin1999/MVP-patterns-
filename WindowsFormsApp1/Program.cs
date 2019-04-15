@@ -29,15 +29,10 @@ namespace WindowsFormsApp1
                     },
                     new Entities.Student(){
                         Name="Anar",Surname="Ehmedov"
-                    }
-
-                    
+                    }                   
                 }
-
             };
-
             new MainController(new Form1(model)).ShowDialog();
-
         }
     }
 }

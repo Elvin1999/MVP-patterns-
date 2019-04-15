@@ -39,8 +39,7 @@ namespace WindowsFormsApp1
             groupsdg.Location = new Point(100, 200);
             groupsdg.DataSource = Model.Student;
             this.Controls.Add(labelTeacher);
-            this.Controls.Add(groupsdg);
-            
+            this.Controls.Add(groupsdg);       
         }
     }
 }
